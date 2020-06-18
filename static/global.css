@@ -1,0 +1,38 @@
+html {
+    --flash: #40b3ff;
+    --gray-dark: #444;
+    --gray-light: rgb(103,103,103);
+}
+
+body {
+    margin: 0;
+    /* font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+    line-height: 1.5;
+    font-weight: 300;
+    font-family: 'Overpass', sans-serif;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object  {
+    display: block;
+    vertical-align: middle;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
