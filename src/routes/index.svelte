@@ -24,10 +24,10 @@
         }
     ]
 </script>
-<svelte:head>
-	<title>Ryan Davis Blog</title>
-</svelte:head>
 
+<svelte:head>
+    <title>Ryan Davis Blog</title>
+</svelte:head>
 
 <div>
 

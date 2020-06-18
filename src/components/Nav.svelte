@@ -20,7 +20,7 @@
         color: var(--gray-dark);
     }
 
-    .link {
+    /* .link {
         font-size: 18px;
-    }
+    } */
 </style>
