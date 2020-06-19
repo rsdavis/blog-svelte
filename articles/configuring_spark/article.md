@@ -20,7 +20,7 @@ it is common to provision a small master node and lots of beefy worker nodes.
 Spark runs in separate processes called "executors"; one of these executors is special, it's called the "driver".
 The driver parses the application, builds an execution graph, and decides how work will be distributed among the available executors. Each executor is configured with multiple cores and a shared memory pool.
 
-![Example](emr_spark_diagram.png)
+![Example](https://res.cloudinary.com/docvozwpw/image/upload/v1592587069/emr_spark_diagram.png)
 
 ## Top 5 Configuration Settings
 

@@ -44,11 +44,13 @@
     }
 
     .markdown :global(h2) {
-        font-size: 26px;
+        font-size: 28px;
+        margin-top: 40px;
     }
 
-    .markdown :global(h2) {
-        margin-top: 40px;
+    .markdown :global(h3) {
+        font-size: 24px;
+        margin-top: 30px;
     }
 
     .markdown :global(p) {
@@ -93,5 +95,13 @@
     .markdown :global(.hljs) {
         background-color: rgb(245,245,245);
         padding: 20px;
+    }
+
+    .markdown :global(img) {
+        margin: 0 auto;
+    }
+
+    .markdown :global(iframe) {
+        margin: 20px auto;
     }
 </style>

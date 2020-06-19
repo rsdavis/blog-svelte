@@ -19,12 +19,12 @@ The category is used to determine into which slice of the pie the point will fal
 ```json
 [
     {
-        category: 'A',
-        hue: 0
+        "category": "A",
+        "hue": 0
     },
     {
-        category: 'B',
-        hue: 1
+        "category": "B",
+        "hue": 1
     }
 ]
 ```
@@ -83,7 +83,7 @@ Again, these calculations can quickly become expensive.
 I have tested that it runs in real time on a small laptop up to a thousand datapoints.
 Mobile may be a different story!
 
-```
+```javascript
 for (let i=0; i<data.length; i++) {
     fx[i] = 0
     fy[i] = 0

@@ -12,6 +12,8 @@ import math from 'remark-math'
 import katex from 'rehype-katex'
 import codeHighlight from 'rehype-highlight'
 import remove from 'unist-util-remove'
+import raw from 'rehype-raw'
+
 
 // custom plugin to copy markdown frontmatter into processed content
 // https://tinyurl.com/y97ex8bf
@@ -54,7 +56,8 @@ const processArticles = function (articlesPath) {
         .use(() => copyFrontmatter)
         .use(copyTitle)
         .use(math)
-        .use(remark2rehype)
+        .use(remark2rehype, { allowDangerousHtml : true })
+        .use(raw)
         .use(katex)
         .use(codeHighlight)
         .use(html)
