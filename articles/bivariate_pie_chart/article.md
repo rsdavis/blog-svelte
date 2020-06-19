@@ -1,6 +1,6 @@
 ---
 date: '2019-06-01'
-tagline: 'Here is an interesting approach to representing bivariate data using a twist on the standard pie chart.'
+tagline: 'Representing bivariate data using a twist on the standard pie chart'
 ---
 
 # D3 Bivariate Pie Chart
@@ -52,7 +52,7 @@ $$
 r = \sqrt{ x (r_1^2 - r_0^2) + r_0^2 }
 $$
 
-```
+```javascript
 place (t0, t1) {
     let r0 = this.inner
     let r1 = this.outer

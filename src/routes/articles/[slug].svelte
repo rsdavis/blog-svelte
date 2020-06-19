@@ -16,10 +16,6 @@
   export let article;
 </script>
 
-<svelte:head>
-  <title>title</title>
-</svelte:head>
-
 <article class='markdown'>
 
     <h1>{ article.title }</h1>

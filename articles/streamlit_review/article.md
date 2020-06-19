@@ -1,6 +1,6 @@
 ---
 date: '2019-11-02'
-tagline: "My two cents"
+tagline: "A quick look at the Python frontend framework designed for data scientists"
 ---
 
 # Streamlit Review

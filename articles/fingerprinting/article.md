@@ -1,6 +1,6 @@
 ---
 date: '2020-03-09'
-tagline: 'What is a fingerprint?'
+tagline: 'A Leetcode problem with a basis in real applications ... go figure'
 ---
 
 # Fingerprints and LeetCode Problem 1377

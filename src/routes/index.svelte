@@ -17,10 +17,6 @@
     export let articles
 </script>
 
-<svelte:head>
-    <title>Ryan Davis Blog</title>
-</svelte:head>
-
 <div>
 
     { #each articles as a }

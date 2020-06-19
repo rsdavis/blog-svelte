@@ -1,6 +1,6 @@
 ---
 date: '2020-02-27'
-tagline: 'The OG of iterative centrality metrics'
+tagline: 'Investigating the OG of iterative centrality metrics'
 ---
 
 # PageRank: Bringing Order To The Web

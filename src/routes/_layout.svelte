@@ -3,6 +3,9 @@
     export const segment = null
 </script>
 
+<svelte:head>
+    <title>Ryan Davis</title>
+</svelte:head>
 
 <header>
     <div class='content'>
