@@ -29,7 +29,7 @@ Doing this for each atom and combining the results give you a molecular fingerpr
 
 ## Solution to LeetCode Problem 1377
 
-Every weekend, [LeetCode](leetcode.com) holds a contest where partipants compete globally to solve four newly published coding challenges in 90minutes. The problems generally consist of an easy problem, two medium problems, and one hard problem in terms of difficulty. In the latest contest [(Weekly Contest 179)](https://leetcode.com/contest/weekly-contest-179), the most difficult problem was a graph analysis challenge where, essentially, you are asked to find the fingerprint. The problem is linked and reproduced below.
+Every weekend, [LeetCode](https://www.leetcode.com) holds a contest where partipants compete globally to solve four newly published coding challenges in 90minutes. The problems generally consist of an easy problem, two medium problems, and one hard problem in terms of difficulty. In the latest contest [(Weekly Contest 179)](https://leetcode.com/contest/weekly-contest-179), the most difficult problem was a graph analysis challenge where, essentially, you are asked to find the fingerprint. The problem is linked and reproduced below.
 
 > [Problem 1377. Frog Position After T Seconds](https://leetcode.com/problems/frog-position-after-t-seconds/)
 
