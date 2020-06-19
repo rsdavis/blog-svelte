@@ -97,11 +97,8 @@
         padding: 20px;
     }
 
-    .markdown :global(img) {
-        margin: 0 auto;
-    }
-
-    .markdown :global(iframe) {
+    .markdown :global(img, table, iframe) {
         margin: 20px auto;
     }
+
 </style>

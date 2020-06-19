@@ -43,7 +43,7 @@ In the first scan, the graph is taken to be undirected so that rank flows in bot
 
 d = 0.15 | d = 0.50 | d = 0.85
 :-------------------------:|:-------------------------:|:-----:|
-![Damping Parameter d=0.15](pr_0.15.png)  |  ![Damping Parameter d=0.50](pr_0.5.png) | ![Damping Parameter d=0.85](pr_0.85.png)
+![Damping Parameter d=0.15](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.15.png)  |  ![Damping Parameter d=0.50](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.5.png) | ![Damping Parameter d=0.85](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.85.png)
 
 Now looking at a directed graph, the effect of the damping parameter becomes more pronounced.
 The directional nature of the edges aligns more closely with the directional nature of hyperlinks on the web.
@@ -53,7 +53,7 @@ As the damping parameter is ramped up to large values, it's easier to see how th
 
 d = 0.15 | d = 0.50 | d = 0.85
 :-------------------------:|:-------------------------:|:-----:|
-![Damping Parameter d=0.15](pr_0.15_directed.png)  |  ![Damping Parameter d=0.50](pr_0.50_directed.png) | ![Damping Parameter d=0.85](pr_0.85_directed.png)
+![Damping Parameter d=0.15](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.15_directed.png)  |  ![Damping Parameter d=0.50](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.50_directed.png) | ![Damping Parameter d=0.85](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.85_directed.png)
 
 ## To Conclude
 

@@ -17,7 +17,7 @@ As of this writing, there are over 40 datatypes, including user names, UUIDs, ph
 
 Once a schema has been built, the application can generate a dataset with thousands of rows of data in multiple formats. The data is then downloaded to the user's file system where they are ready to serve as input to another application.
 
-![Datatypes](types.png)
+![Datatypes](https://res.cloudinary.com/docvozwpw/image/upload/v1592602433/types.png)
 
 ## The Frontend
 
@@ -28,7 +28,7 @@ I chose to use a sidebar with tabs to consolidate all of the options.
 The entire frontend was created using React.
 I used the [react-sortable-hoc](https://github.com/clauderic/react-sortable-hoc) library to make the columns sortable with a smooth drag-and-drop animation.
 
-![Table](table.png)
+![Table](https://res.cloudinary.com/docvozwpw/image/upload/v1592602428/table.png)
 
 ## The Backend
 

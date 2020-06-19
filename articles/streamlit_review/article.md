@@ -38,7 +38,7 @@ Streamlit will begin serving on port 8501 (by default) and display the JSON to v
 When a user toggles the checkbox, the code is re-evaluated in a top-down manner.
 Notice that there are no callback handlers for the checkbox, no CSS to style the JSON, and the entire state is contained in a variable `show_json`.
 
-![Example](example.png)
+![Example](https://res.cloudinary.com/docvozwpw/image/upload/v1592602348/example.png)
 
 For larger dashboards, developers will begin running into issues with data being reprocessed everytime the user iteracts with a widget.
 Streamlit has a caching system built in for intermediate computations so that the dashboard remains responsive.

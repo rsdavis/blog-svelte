@@ -39,7 +39,7 @@ Every weekend, [LeetCode](leetcode.com) holds a contest where partipants compete
 
 > Return the probability that after t seconds the frog is on the vertex target.
 
-![Problem 1337](frog_2.png)
+![Problem 1337](https://res.cloudinary.com/docvozwpw/image/upload/v1592602154/frog_2.png)
 
 In the example above, the frog starts at node 1 and makes two hops to land on node 4 with a probability of 0.16.
 
