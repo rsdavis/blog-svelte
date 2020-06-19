@@ -78,6 +78,10 @@
         background-color: rgb(245,245,245);
     }
 
+    .markdown :global(blockquote) :global(p) {
+        margin: 0;
+    }
+
     .markdown :global(.katex-display) {
         margin: 40px 0;
     }
