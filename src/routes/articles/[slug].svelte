@@ -63,4 +63,12 @@
         border-left: 5px solid rgb(200,200,200);
         background-color: rgb(245,245,245);
     }
+
+    .markdown :global(.katex-display) {
+        margin: 40px 0;
+    }
+
+    .markdown :global(.katex) {
+        font-size: 20px;
+    }
 </style>

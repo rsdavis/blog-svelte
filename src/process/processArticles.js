@@ -8,7 +8,8 @@ import remark2rehype from 'remark-rehype'
 import html from 'rehype-stringify'
 import visit from 'unist-util-visit'
 import is from 'unist-util-is'
-
+import math from 'remark-math'
+import katex from 'rehype-katex'
 
 // custom plugin to copy markdown frontmatter into processed content
 // https://tinyurl.com/y97ex8bf
@@ -48,7 +49,9 @@ const processArticles = function (articlesPath) {
         .use(parseFrontmatter)
         .use(() => copyFrontmatter)
         .use(copyTitle)
+        .use(math)
         .use(remark2rehype)
+        .use(katex)
         .use(html)
 
     // get list of articles
