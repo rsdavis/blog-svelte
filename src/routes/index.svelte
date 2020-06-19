@@ -1,28 +1,20 @@
 
 
+<script context="module">
+
+    export function preload({ params, query }) {
+
+        console.log('fetch articles')
+        return this.fetch('index.json')
+            .then(r => r.json())
+            .then(articles => ({ articles }))
+
+    }
+
+</script>
+
 <script>
-    let articles = [
-        {
-            title: "Write less code",
-            text: "The most important metric you're not paying attention to",
-            slug: 'write-less-code'
-        },
-        {
-            title: "Svelte for new developers",
-            text: 'Never used Node.js or the command line? No problem',
-            slug: 'svelte-for-new-developers'
-        },
-        {
-            title: "Svelte on The Chnagelog",
-            text: "Listen to the interview here",
-            slug: 'svelte-on-the-changelog'
-        },
-        {
-            title: "Virtual DOM is pure overhead",
-            text: "Let's retire the virtual DOM is fast myth once and for all",
-            slug: 'virtual-dom-is-pure-overhead'
-        }
-    ]
+    export let articles
 </script>
 
 <svelte:head>
@@ -31,11 +23,11 @@
 
 <div>
 
-    { #each articles as article }
+    { #each articles as a }
         <article>
-            <a href='blog/{article.slug}'>
-                <h2>{ article.title }</h2>
-                <p>{ article.text }</p>
+            <a href='/'>
+                <h2>{ a.title }</h2>
+                <p>{ a.tagline }</p>
             </a>
         </article>
     { /each }

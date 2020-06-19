@@ -1,11 +1,10 @@
 ---
 date: '2020-02-27'
-image: 'pr_0.85.png'
+tagline: 'The OG of iterative centrality metrics'
 ---
 
 # PageRank: Bringing Order To The Web
 
-PageRank is the OG of iterative centrality metrics.
 Just a couple of decades ago, when the web was exploding with content, PageRank became its central nervous system, routing queries to high-quality and relevant pages through Google's search engine.
 Here I take a visual approach to evaluating the algorithm.
 

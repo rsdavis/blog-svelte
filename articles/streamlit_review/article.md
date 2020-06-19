@@ -1,6 +1,6 @@
 ---
 date: '2019-11-02'
-image: 'featured.png'
+tagline: "My two cents"
 ---
 
 # Streamlit Review

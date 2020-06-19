@@ -1,12 +1,13 @@
 
-const fs = require('fs')
-const unified = require('unified')
-const markdown = require('remark-parse')
-const frontmatter = require('remark-frontmatter')
-const remark2rehype = require('remark-rehype')
-const html = require('rehype-stringify')
-const parseFrontmatter = require('remark-parse-yaml')
-const visit = require('unist-util-visit');
+import fs from 'fs'
+import unified from 'unified'
+import markdown from 'remark-parse'
+import frontmatter from 'remark-frontmatter'
+import parseFrontmatter from 'remark-parse-yaml'
+import remark2rehype from 'remark-rehype'
+import html from 'rehype-stringify'
+import visit from 'unist-util-visit'
+import is from 'unist-util-is'
 
 
 // custom plugin to copy markdown frontmatter into processed content
@@ -17,7 +18,28 @@ const copyFrontmatter = function (ast, file) {
     })
 }
 
+
+function copyTitle () {
+
+    function transformer (tree, file) {
+
+        visit(tree, 'heading', node => {
+            if (is(node, { depth: 1 })) {
+                node.children.forEach(child => {
+                    if (is(child, 'text')) {
+                        file.data.title = child.value
+                    }
+                })
+            }
+        })
+    }
+
+    return transformer
+
+}
+
 const processArticles = function (articlesPath) {
+
 
     // create the markdown processor
     const processor = unified()
@@ -25,6 +47,7 @@ const processArticles = function (articlesPath) {
         .use(frontmatter)
         .use(parseFrontmatter)
         .use(() => copyFrontmatter)
+        .use(copyTitle)
         .use(remark2rehype)
         .use(html)
 
@@ -41,18 +64,20 @@ const processArticles = function (articlesPath) {
         const path = articlesPath + '/' + name + '/article.md'
         const contents = String(fs.readFileSync(path))
         const vfile = processor.processSync(contents)
-        console.log(vfile)
-        const html = vfile.contents
 
-        return { name, slug, path, html }
+        const html = vfile.contents
+        const date = vfile.data.frontmatter.date
+        const title = vfile.data.title
+        const tagline = vfile.data.frontmatter.tagline
+
+        return { name, slug, path, date, title, html, tagline }
 
     })
 
-    // sort by date
 
     return articles
 
 }
 
 
-module.exports = processArticles('./articles')
+export default processArticles('./articles')

@@ -1,11 +1,10 @@
 ---
 date: '2019-06-01'
-image: 'pie-binary.png'
+tagline: 'Here is an interesting approach to representing bivariate data using a twist on the standard pie chart.'
 ---
 
 # D3 Bivariate Pie Chart
 
-Here is an interesting approach to representing bivariate data using a twist on the standard pie chart.
 I use D3 to draw a point for each datum according to its membership in two categorical variables.
 One variable sets the sector while the other decides the hue.
 Its a unique way of communicating highly skewed distributions at a glance.

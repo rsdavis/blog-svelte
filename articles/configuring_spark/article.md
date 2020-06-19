@@ -1,6 +1,6 @@
 ---
 date: '2019-11-24'
-image: 'worker_node.png'
+tagline: 'The fundamentals of distributed system computation'
 ---
 
 # Configuring a Spark Cluster

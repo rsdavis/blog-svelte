@@ -1,6 +1,6 @@
 ---
 date: '2020-03-09'
-image: 'frog_2.png'
+tagline: 'What is a fingerprint?'
 ---
 
 # Fingerprints and LeetCode Problem 1377

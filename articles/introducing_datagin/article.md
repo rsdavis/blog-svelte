@@ -1,6 +1,6 @@
 ---
 date: '2020-01-08'
-image: 'datagin_logo.png'
+tagline: 'A pseudo-random dataset generator you never knew you needed'
 ---
 
 # Introducing DataGin
