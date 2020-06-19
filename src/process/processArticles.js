@@ -10,6 +10,7 @@ import visit from 'unist-util-visit'
 import is from 'unist-util-is'
 import math from 'remark-math'
 import katex from 'rehype-katex'
+import codeHighlight from 'rehype-highlight'
 
 // custom plugin to copy markdown frontmatter into processed content
 // https://tinyurl.com/y97ex8bf
@@ -52,6 +53,7 @@ const processArticles = function (articlesPath) {
         .use(math)
         .use(remark2rehype)
         .use(katex)
+        .use(codeHighlight)
         .use(html)
 
     // get list of articles

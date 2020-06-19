@@ -53,7 +53,7 @@
         margin-top: 20px;
     }
 
-    .markdown :global(a):hover {
+    .markdown :global(a) {
         color: var(--flash);
     }
 
@@ -70,5 +70,9 @@
 
     .markdown :global(.katex) {
         font-size: 20px;
+    }
+
+    .markdown :global(.lhjs) {
+        background-color: rgb(245,245,245);
     }
 </style>
