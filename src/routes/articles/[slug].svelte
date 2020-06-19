@@ -21,6 +21,10 @@
 </svelte:head>
 
 <article class='markdown'>
+
+    <h1>{ article.title }</h1>
+    <p class='tagline'>{ article.tagline }</p>
+    <date>{ article.date }</date>
     {@html article.html}
 </article>
 
@@ -33,24 +37,34 @@
         letter-spacing: normal;
     }
 
-    .markdown > :global(h1) {
+    .markdown :global(h1) {
         margin-top: 50px;
         font-size: 40px;
         text-size-adjust: 100%;
     }
 
-    .markdown > :global(h2) {
+    .markdown :global(h2) {
         font-size: 26px;
     }
 
-    .markdown > :global(h2) {
+    .markdown :global(h2) {
         margin-top: 40px;
     }
 
-    .markdown > :global(p) {
+    .markdown :global(p) {
         font-size: 18px;
         line-height: 1.7;
         margin-top: 20px;
+    }
+
+    p.tagline {
+        padding: 0;
+        margin: 0;
+        color: var(--gray-light);
+    }
+
+    date {
+        color: var(--gray-light);
     }
 
     .markdown :global(a) {
@@ -72,7 +86,8 @@
         font-size: 20px;
     }
 
-    .markdown :global(.lhjs) {
+    .markdown :global(.hljs) {
         background-color: rgb(245,245,245);
+        padding: 20px;
     }
 </style>

@@ -34,7 +34,7 @@ Without a doubt, the most important aspect of Spark configuration is the setting
 
 As an example, here is what the `spark-defaults.conf` file might look like for the cluster above.
 
-```
+```text
 spark.driver.cores          4
 spark.driver.memory         6G
 spark.executor.cores        4
@@ -87,7 +87,7 @@ That leaves 10GB left for Spark. Assuming we use a single executor on this machi
 
 By default, Spark will configure a 10% memory chunk for Yarn. If you end up allocating a large allowance, be sure to let Spark know by setting the appopriate setting.
 
-```
+```text
 spark.yarn.executor.memoryOverhead = 2GB
 ```
 
@@ -99,7 +99,7 @@ As for memory, the c5.4xlarge has 32GB to work with. According to the [Tax Table
 
 Now, for the master, I would go for the m5.xlarge. The m5 benefits from extra memory, which will be more useful on the master than compute. Honestly, the quad-core xlarge is more compute than we will need. But, if I decide to run the driver on the master (more on this in a later post), then I have three cores I could use for the executor.
 
-```
+```text
 spark.driver.cores = 3
 spark.driver.memory = 4GB
 spark.executor.cores = 3

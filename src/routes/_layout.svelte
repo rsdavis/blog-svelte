@@ -29,4 +29,8 @@
         margin: 0 auto;
     }
 
+    main > .content {
+        margin-bottom: 50px;
+    }
+
 </style>

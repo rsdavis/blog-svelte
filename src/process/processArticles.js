@@ -11,6 +11,7 @@ import is from 'unist-util-is'
 import math from 'remark-math'
 import katex from 'rehype-katex'
 import codeHighlight from 'rehype-highlight'
+import remove from 'unist-util-remove'
 
 // custom plugin to copy markdown frontmatter into processed content
 // https://tinyurl.com/y97ex8bf
@@ -32,6 +33,8 @@ function copyTitle () {
                         file.data.title = child.value
                     }
                 })
+
+                remove(tree, node)
             }
         })
     }
