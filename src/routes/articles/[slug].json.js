@@ -1,23 +1,14 @@
 
+import articles from '../../process/processArticles.js'
 
 export function get(req, res, next) {
 
-    const articles = [
-        {
-            slug: 'a',
-            title: 'a',
-            tagline: 'a'
-        },
-        {
-            slug: 'b',
-            title: 'b',
-            tagline: 'b'
-        }
-    ]
+    const { slug } = req.params
 
-    const payload = JSON.stringify(articles)
+    const article = articles.find(item => item.slug === slug)
 
-    console.log('GET ARTICLE')
+    const payload = JSON.stringify(article)
+
     res.writeHead(200, { 'Content-Type': 'application/json' })
     res.end(payload)
 

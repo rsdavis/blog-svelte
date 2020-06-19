@@ -25,7 +25,7 @@
 
     { #each articles as a }
         <article>
-            <a href='/'>
+            <a href={'/articles/'+a.slug}>
                 <h2>{ a.title }</h2>
                 <p>{ a.tagline }</p>
             </a>
@@ -43,7 +43,6 @@
     }
 
     h2 {
-        font-weight: 300;
         font-size: 26px;
         font-family: 'Overpass', sans-serif;
         color: var(--gray-dark);

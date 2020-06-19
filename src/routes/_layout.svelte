@@ -24,7 +24,7 @@
     }
 
     .content {
-        max-width: 1024px;
+        max-width: 900px;
         padding: 0 30px 0 30px;
         margin: 0 auto;
     }

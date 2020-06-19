@@ -74,6 +74,9 @@ const processArticles = function (articlesPath) {
 
     })
 
+    const comp = (a, b) => { return a.date > b.date ? -1 : 1 }
+
+    articles.sort(comp)
 
     return articles
 

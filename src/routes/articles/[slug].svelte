@@ -4,30 +4,63 @@
         // the `slug` parameter is available because
         // this file is called [slug].svelte
 
-        const res = await this.fetch(`blog/${params.slug}.json`);
-        const data = await res.json();
-
-        if (res.status === 200) {
-            return { post: data };
-        } else {
-            this.error(res.status, data.message);
-        }
+        return this.fetch(`articles/${params.slug}.json`)
+            .then(r => r.json())
+            .then(article => ({ article }))
+            .catch(console.error)
 
     }
 </script>
 
 <script>
-  export let post;
+  export let article;
 </script>
-
-<style>
-
-</style>
 
 <svelte:head>
   <title>title</title>
 </svelte:head>
 
-<div class="content">
-    {@html post}
-</div>
+<article class='markdown'>
+    {@html article.html}
+</article>
+
+
+<style>
+
+    .markdown {
+        color: var(--gray-dark);
+        font-weight: 300;
+        letter-spacing: normal;
+    }
+
+    .markdown > :global(h1) {
+        margin-top: 50px;
+        font-size: 40px;
+        text-size-adjust: 100%;
+    }
+
+    .markdown > :global(h2) {
+        font-size: 26px;
+    }
+
+    .markdown > :global(h2) {
+        margin-top: 40px;
+    }
+
+    .markdown > :global(p) {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-top: 20px;
+    }
+
+    .markdown :global(a):hover {
+        color: var(--flash);
+    }
+
+    .markdown :global(blockquote) {
+        margin: 20px 0 0 0;
+        padding: 20px;
+        border-left: 5px solid rgb(200,200,200);
+        background-color: rgb(245,245,245);
+    }
+</style>
