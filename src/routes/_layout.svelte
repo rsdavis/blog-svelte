@@ -1,5 +1,6 @@
 <script>
     import Nav from '../components/Nav.svelte'
+    import Footer from '../components/Footer.svelte'
     export const segment = null
 </script>
 
@@ -19,11 +20,20 @@
     </div>
 </main>
 
+<footer>
+    <div class='content'>
+        <Footer/>
+    </div>
+</footer>
 
 <style>
 
     header {
         border-bottom: 1px solid rgb(210,210,210);
+    }
+
+    footer {
+        border-top: 1px solid rgb(210,210,210);
     }
 
     .content {
@@ -33,7 +43,7 @@
     }
 
     main > .content {
-        margin-bottom: 50px;
+        margin-bottom: 80px;
     }
 
 </style>
