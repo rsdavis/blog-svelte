@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "ryan-davis-blog",
+  "description": "A blog made using SvelteJS",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
