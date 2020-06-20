@@ -95,6 +95,7 @@
 
     .markdown :global(img, table, iframe) {
         margin: 20px auto;
+        max-width: 100%;
     }
 
 </style>

@@ -41,19 +41,14 @@ It's interesting what type of role the damping parameter plays in the PageRank r
 
 In the first scan, the graph is taken to be undirected so that rank flows in both directions across edges during iteration. At a small value ($d=0.15$), the nodes are mostly uniform, as the first term $(1-d)/N$ dominates the balance. At a larger value ($d=0.85$), we can see from the size of the more well-connected nodes that they have an increased PageRank. Overall though, the damping parameter does not seem to have a substantial effect on the results in this case.
 
-d = 0.15 | d = 0.50 | d = 0.85
-:-------------------------:|:-------------------------:|:-----:|
-![Damping Parameter d=0.15](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.15.png)  |  ![Damping Parameter d=0.50](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.5.png) | ![Damping Parameter d=0.85](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.85.png)
+![Undirected graph with dampening parameter](https://res.cloudinary.com/docvozwpw/image/upload/w_900/undirected.png)
 
 Now looking at a directed graph, the effect of the damping parameter becomes more pronounced.
 The directional nature of the edges aligns more closely with the directional nature of hyperlinks on the web.
 Again, at a low damping parameter, the nodes are largely uniform, as expected.
 As the damping parameter is ramped up to large values, it's easier to see how the rank of a node is given by a combination of the rank of neighboring nodes. Almost as if the edges represent a "vote" whose weight scales with the rank of the contributing node.
 
-
-d = 0.15 | d = 0.50 | d = 0.85
-:-------------------------:|:-------------------------:|:-----:|
-![Damping Parameter d=0.15](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.15_directed.png)  |  ![Damping Parameter d=0.50](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.50_directed.png) | ![Damping Parameter d=0.85](https://res.cloudinary.com/docvozwpw/image/upload/w_290/pr_0.85_directed.png)
+![Directed graph with dampening parameter](https://res.cloudinary.com/docvozwpw/image/upload/w_900/directed.png)
 
 ## To Conclude
 
