@@ -4,9 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper build --legacy",
-    "deploy": "aws s3 sync ./__sapper__/export s3://ryanscdavis.com",
     "export": "sapper export --legacy",
+    "deploy": "aws s3 sync ./__sapper__/export s3://rdavis.io",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",

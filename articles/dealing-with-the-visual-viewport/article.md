@@ -1,17 +1,21 @@
 ---
-date: '2020-06-30'
-tagline: The nitty gritty details
+date: '2020-07-03'
+tagline: Viewports within viewports
 ---
 
 # Dealing with the visual viewport
 
-You're familiar with the viewport, the Javascript API that enables client code to access the dimensions of the browser window. But, what if I told you that inside that viewport, there is another viewport? It goes undetected most of the time. You don't even think about it until you test your site on a mobile device, and the virtual keyboard starts moving content everywhere. Then its time to start thinking about nested viewports.
+You're familiar with the viewport, the Javascript API that enables client code to access the dimensions of the browser window. But, inside of that viewport, there is another viewport! It goes undetected most of the time. You don't even think about it until you test your site on a mobile device, and the virtual keyboard starts moving content everywhere. Then its time to start thinking about nested viewports.
 
 ## A bit of history
 
-First, there was the "layout viewport." This viewport decides the layout of the page content so that every time the viewport changes, the content of the page gets moved and possibly rerendered. However, introducing new CSS and running Javascript every time the viewport changes cost CPU cycles and can disrupt the smooth user experience. On the desktop, this doesn't happen too often. But on mobile, the layout viewport would change every time a small taskbar popped up, or the keyboard opened.
+First, there was the "layout viewport." This viewport decides the layout of the page content so that every time the viewport changes, the content of the page gets moved and possibly rerendered.
+You have likely noticed this by resizing the browser window and watching content jump around the page.
+Its not a great user experience, but then again, desktop users are not constantly resizing their browsers.
+With a mobile device, on the other hand, taskbars and the keyboard are constantly transitioning in and out of view.
+If the browser were to alter the layout viewport during each keyboard or taskbar animation frame, it would be a horrible experience.
 
-Apple decided that paying the cost of a layout change on a dynamic, mobile view was too costly. Instead of changing the dimensions of the page, components native to the mobile environment will either appear over the page content or simply move it off the screen. Of course, allowing the browser to shift and cover content without giving the page creator any opportunity to run adjustments is great for performance, but creates a nightmare developer experience and limits application design.
+At some point during mobile browser development, it was decided that triggering a layout change is simply too costly for a smooth mobile experience. Instead of changing the dimensions of the page, components native to the mobile environment will either appear over the page content or simply move it off the screen. Of course, allowing the browser to shift and cover content without giving the page creator any opportunity to run adjustments is great for performance, but creates a nightmare developer experience and limits application design.
 
 ## The visual viewport
 
@@ -34,7 +38,7 @@ window.visualViewport.pageLeft
 window.visualViewport.pageTop
 ```
 
-## { position: device-fixed }
+## Simulating { position: device-fixed }
 
 An immediate use case for the Visual Viewport API is to position content so that it is fixed relative to the viewport. This task is routinely accomplished within the *layout viewport* using CSS.
 
@@ -71,5 +75,14 @@ Despite the complexity of dealing with nested views, the code is relatively simp
 
  ## Two cents for two views
 
-If you made it this far in the article, you have probably picked up on my frustration around this topic. Let me try to summarize it as clearly as I can. The primary reason why we have a viewport is to change the content and style when the view changes. Rather than making this as performant as possible, we decide not to use the viewport when the view changes. Instead, we introduce *another* viewport that behaves differently. And then give the new viewport an API so that developers can accomplish the things they wanted to achieve within the original viewport. Except that even the documentation says that developers should not use the new API for those purposes. But they do it anyway because they have design specs and features to ship. In the end, we end up with an increasingly complex developer environment, slow Javascript-shimmed styling, and limited web experiences.
+If you made it this far in the article, you have probably picked up on my frustration around this topic. Let me try to summarize it as clearly as I can. The primary reason why we have a viewport is to change the content and style when the view changes. Rather than making this as performant as possible, we decide not to use the viewport when the view changes. Instead, we introduce *another* viewport that behaves differently. And then give the new viewport an API so that developers can accomplish the things they wanted to achieve within the original viewport. Except that even the documentation says that developers should not use the new API for those purposes. In the end, we end up with an increasingly complex developer environment, slow Javascript-shimmed styling, and limited web experiences.
 
+## Related Links
+
+[The Eccentric Ways of iOS Safari with the Keyboard](https://blog.opendigerati.com/the-eccentric-ways-of-ios-safari-with-the-keyboard-b5aa3f34228d)
+
+This is an older article written without reference to the Visual Viewport API, but it clearly articulates the odd behavior of mobile browsers.
+
+[Introducing visualViewport](https://developers.google.com/web/updates/2017/09/visual-viewport-api)
+
+A nice introduction to the Visual Viewport API by Jake Archibald with a demo on how to simulate `{ position: device-fixed }`

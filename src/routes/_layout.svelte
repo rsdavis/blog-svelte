@@ -1,12 +1,20 @@
 <script>
+    import { stores } from "@sapper/app"
+
     import Nav from '../components/Nav.svelte'
     import Footer from '../components/Footer.svelte'
+    import GoogleAnalytics from '../components/GoogleAnalytics.svelte'
     export const segment = null
+
+    let ga_measurment_id = "UA-90643542-5"  // your analytics id
+
 </script>
 
 <svelte:head>
     <title>Ryan Davis</title>
 </svelte:head>
+
+<GoogleAnalytics {stores} id={ga_measurment_id}/>
 
 <header>
     <div class='content'>
