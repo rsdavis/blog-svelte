@@ -16,6 +16,13 @@
   export let article;
 </script>
 
+<svelte:head>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ryanscdavis"/>
+    <meta name="twitter:title" content={article.title}/>
+    <meta name="twitter:description" content={article.tagline}/>
+</svelte:head>
+
 <article class='markdown'>
 
     <h1>{ article.title }</h1>

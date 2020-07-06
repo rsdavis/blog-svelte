@@ -18,7 +18,7 @@
 </style>
 
 <svelte:head>
-	<title>Blog</title>
+    <title>Blog</title>
 </svelte:head>
 
 <h1>Recent posts</h1>
