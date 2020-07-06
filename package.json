@@ -6,6 +6,7 @@
     "dev": "sapper dev",
     "export": "sapper export --legacy",
     "deploy": "aws s3 sync ./__sapper__/export s3://rdavis.io",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E3M94K1VP44WDB --path '/*'",
     "serve": "npx serve __sapper__/export",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
