@@ -21,6 +21,9 @@
     <meta name="twitter:site" content="@ryanscdavis"/>
     <meta name="twitter:title" content={article.title}/>
     <meta name="twitter:description" content={article.tagline}/>
+    { #if article.image }
+        <meta name="twitter:image" content={article.image}/>
+    { /if }
 </svelte:head>
 
 <article class='markdown'>
@@ -29,6 +32,7 @@
     <p class='tagline'>{ article.tagline }</p>
     <date>{ article.date }</date>
     {@html article.html}
+
 </article>
 
 
@@ -57,6 +61,12 @@
     }
 
     .markdown :global(p) {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-top: 20px;
+    }
+
+    .markdown :global(ul) {
         font-size: 18px;
         line-height: 1.7;
         margin-top: 20px;

@@ -80,8 +80,9 @@ const processArticles = function (articlesPath) {
         const date = vfile.data.frontmatter.date
         const title = vfile.data.title
         const tagline = vfile.data.frontmatter.tagline
+        const image = vfile.data.frontmatter.image
 
-        return { name, slug, path, date, title, html, tagline }
+        return { name, slug, path, date, title, html, tagline, image }
 
     })
 
