@@ -2,13 +2,21 @@
 
 <script context="module">
 
-    export function preload({ params, query }) {
+    export async function preload({ params, query }) {
 
         console.log('fetch articles')
-        return this.fetch('index.json')
-            .then(r => r.json())
-            .then(articles => ({ articles }))
+        let response = {}
 
+        const data = await this.fetch('index.json')
+        const articles = await data.json()
+
+        // this.fetch('index.json')
+        //     .then(r => r.json())
+        //     .then(articles => ({ articles }))
+            // .then(() => this.fetch('sitemap.xml'))
+
+        await this.fetch('sitemap.xml')
+        return { articles }
     }
 
 </script>
