@@ -4,7 +4,6 @@
 
     export async function preload({ params, query }) {
 
-        console.log('fetch articles')
         let response = {}
 
         const data = await this.fetch('index.json')
@@ -42,7 +41,6 @@
 <style>
 
     article {
-        margin-top: 40px;
         transition: 0.2s;
     }
 

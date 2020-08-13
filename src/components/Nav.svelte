@@ -1,9 +1,17 @@
 <script>
+
+    import { stores } from '@sapper/app'
+
+    const { page } = stores()
+
+    const path = $page.path
+
 </script>
 
 <nav>
     <h1><a href='/'>Ryan Davis</a></h1>
-    <!-- <a class='link'>Blog</a> -->
+    <a class:active={$page.path === '/'} href='/' class='link'>Articles</a>
+    <a class:active={$page.path === '/projects'} href='/projects' class='link'>Projects</a>
 </nav>
 
 <style>
@@ -20,7 +28,16 @@
         color: var(--gray-dark);
     }
 
-    /* .link {
+    .link {
+        margin-left: 1em;
         font-size: 18px;
-    } */
+    }
+
+    .link:hover {
+        color: var(--flash);
+    }
+
+    .active {
+        text-decoration: underline;
+    }
 </style>

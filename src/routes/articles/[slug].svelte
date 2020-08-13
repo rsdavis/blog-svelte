@@ -45,7 +45,6 @@
     }
 
     .markdown :global(h1) {
-        margin-top: 50px;
         font-size: 40px;
         text-size-adjust: 100%;
     }

@@ -1,12 +1,13 @@
 <script>
+
     import { stores } from "@sapper/app"
 
     import Nav from '../components/Nav.svelte'
     import Footer from '../components/Footer.svelte'
     import GoogleAnalytics from '../components/GoogleAnalytics.svelte'
-    export const segment = null
 
     let ga_measurment_id = "UA-90643542-5"  // your analytics id
+    const env = process.env.NODE_ENV
 
 </script>
 
@@ -14,22 +15,24 @@
     <title>Ryan Davis</title>
 </svelte:head>
 
-<GoogleAnalytics {stores} id={ga_measurment_id}/>
+{ #if env === 'production' }
+    <GoogleAnalytics {stores} id={ga_measurment_id}/>
+{ /if }
 
 <header>
-    <div class='content'>
-        <Nav/>
+    <div class='container'>
+        <Nav />
     </div>
 </header>
 
 <main>
-    <div class='content'>
+    <div class='container content'>
         <slot></slot>
     </div>
 </main>
 
 <footer>
-    <div class='content'>
+    <div class='container'>
         <Footer/>
     </div>
 </footer>
@@ -44,13 +47,14 @@
         border-top: 1px solid rgb(210,210,210);
     }
 
-    .content {
+    .container {
         max-width: 900px;
         padding: 0 30px 0 30px;
         margin: 0 auto;
     }
 
-    main > .content {
+    .content {
+        margin-top: 40px;
         margin-bottom: 80px;
     }
 
