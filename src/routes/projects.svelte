@@ -5,8 +5,17 @@
 
 <ul class='projects'>
 
-    <li class='project'>p1</li>
-    <li class='project'>p2</li>
+    <li class='project'>
+        <a href='https://leetcodeleaderboard.com'>
+            <img src="LL_img.png" alt="Leetcode Leaderboard"/>
+        </a>
+    </li>
+
+    <li class='project'>
+        <a href="https://datagin.io">
+            <img src="DG_img.png" alt="DataGin"/>
+        </a>
+    </li>
 
 </ul>
 
@@ -20,12 +29,21 @@
 
     .projects {
         display: grid;
-        grid-gap: 1em;
+        grid-gap: 2em;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .project {
-        border: 1px solid black;
+        opacity: 0.8;
+    }
+
+    .project:hover {
+        opacity: 1;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
     }
 
 </style>

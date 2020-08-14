@@ -42,6 +42,7 @@
 
     article {
         transition: 0.2s;
+        margin-top: 20px;
     }
 
     h2 {
