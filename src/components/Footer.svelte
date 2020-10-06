@@ -5,7 +5,7 @@
 </script>
 
 <div class='container'>
-    <a href='https://github.com/ryanscdavis'>
+    <a href='https://github.com/rsdavis'>
         <Fa icon={faGithub} size='2x'/>
     </a>
     <a href='https://www.linkedin.com/in/ryanscdavis/'>

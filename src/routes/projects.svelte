@@ -1,21 +1,45 @@
 
 <script>
 
+    import ProjectCard from '../components/ProjectCard.svelte'
+
 </script>
 
 <ul class='projects'>
 
-    <li class='project'>
-        <a href='https://leetcodeleaderboard.com'>
-            <img src="LL_img.png" alt="Leetcode Leaderboard"/>
-        </a>
+    <li>
+
+        <ProjectCard
+            src='cfguru.png'
+            href='https://codeforces.guru'
+            title='CodeForces.guru'
+            description='Analytics dashboard for Codeforces competitions'
+        />
+
     </li>
 
-    <li class='project'>
-        <a href="https://datagin.io">
-            <img src="DG_img.png" alt="DataGin"/>
-        </a>
+    <li>
+
+        <ProjectCard
+            src='DG_img.png'
+            href='https://datagin.io'
+            title='DataGin.io'
+            description='A pseudo-random mock dataset generator'
+        />
+
     </li>
+
+    <li>
+
+        <ProjectCard
+            src='LL_img.png'
+            href='https://leetcodeleaderboard.com'
+            title='Leetcode Leaderboard'
+            description='Interactive dashboard of Leetcode contest leaders'
+        />
+
+    </li>
+
 
 </ul>
 
@@ -29,21 +53,9 @@
 
     .projects {
         display: grid;
-        grid-gap: 2em;
+        grid-gap: 1em;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    .project {
-        opacity: 0.8;
-    }
-
-    .project:hover {
-        opacity: 1;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
+        grid-auto-rows: 300px;
     }
 
 </style>
