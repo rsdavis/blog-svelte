@@ -25,9 +25,9 @@
         position: relative;
         border-radius: 5px;
         overflow: hidden;
-        -webkit-box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.5);
-        -moz-box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.5);
-        box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.5);
+        -webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.5);
+        -moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.5);
+        box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.5);
         transition: 0.1s;
     }
 
