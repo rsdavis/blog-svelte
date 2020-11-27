@@ -6,8 +6,18 @@ const sitemap =
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 <loc>https://rdavis.io/</loc>
-<lastmod>2020-07-06T19:13:54+00:00</lastmod>
+<lastmod>2020-11-26T00:00:00+00:00</lastmod>
 <priority>1.00</priority>
+</url>
+<url>
+<loc>https://rdavis.io/articles/combo_context_with_stores/</loc>
+<lastmod>2020-11-15T00:00:00+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://rdavis.io/articles/svelte_collapsible_card_component/</loc>
+<lastmod>2020-07-06T19:13:54+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
 <loc>https://rdavis.io/articles/aws_static_site_hosting/</loc>
