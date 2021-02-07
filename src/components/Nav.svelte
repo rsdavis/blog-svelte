@@ -31,6 +31,7 @@
     .link {
         margin-left: 1em;
         font-size: 18px;
+        color: var(--gray-dark);
     }
 
     .link:hover {
