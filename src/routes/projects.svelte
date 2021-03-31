@@ -33,9 +33,9 @@
 
         <ProjectCard
             src='LL_img.png'
-            href='https://leetcodeleaderboard.com'
-            title='Leetcode Leaderboard'
-            description='Interactive dashboard of Leetcode contest leaders'
+            href='https://dashboard.leetcode.observer'
+            title='Leetcode Observer'
+            description='Interactive dashboard of Leetcode contest rankings'
         />
 
     </li>
